@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import logo from '../../logo.svg';
 
 
 export class Header extends Component {
@@ -6,7 +7,7 @@ export class Header extends Component {
         return (
             <div className="py-5 text-center">
                 <img className="d-block mx-auto mb-4"
-                     src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" alt="" width="72"
+                     src={logo} alt="" width="72"
                      height="72"/>
                 <h2>Checkout form</h2>
                 <p className="lead">Below is an example form built entirely with Bootstrap's form controls. Each

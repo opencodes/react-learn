@@ -1,20 +1,52 @@
-import React, {Component } from 'react';
+import React, {Component} from 'react';
 import {BillingAddress} from "../componens/Checkout/BillingAddress";
 import {Cart} from "../componens/Checkout/Cart";
 import axios from 'axios';
-export class Checkout extends Component{
-    loadData(){
-        axios.get('../json/Checkout.json').s
+
+export class Checkout extends Component {
+    checkoutData =  {
+        cart : {
+            products:[]
+        },
+        "coupon":{
+            "code":"",
+            "discount":""
+        }
+    };
+
+    loadData() {
+        let _this = this;
+        axios.get('./Checkout.json').then(function (response) {
+            // handle success
+            console.log(response);
+            _this.checkoutData = response.data;
+            _this.setState({
+                checkoutData: response.data
+            })
+        })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
     }
-    render(){
-        return(
+
+    componentDidMount() {
+        this.loadData();
+    }
+
+    componentWillUnmount() {
+
+    }
+
+    render() {
+        console.log('checkoutData',this.checkoutData)
+        return (
             <div className='row'>
                 <div className='col-md-4 order-md-2 mb-4'>
-                    <h4 className="d-flex justify-content-between align-items-center mb-3">
-                        <span className="text-muted">Your cart</span>
-                        <span className="badge badge-secondary badge-pill">3</span>
-                    </h4>
-                    <Cart/>
+                    <Cart cart={this.checkoutData.cart}/>
                 </div>
                 <div className='col-md-8 order-md-1'>
                     <h4 className="mb-3">Billing address</h4>

@@ -2,7 +2,7 @@
   "cart": {
     "products": [
       {
-        "ProductId": "HT-1000",
+        "id": "1000",
         "Category": "Laptops",
         "MainCategory": "Computer Systems",
         "TaxTarifCode": "1",
@@ -24,7 +24,7 @@
         "DimUnit": "cm"
       },
       {
-        "ProductId": "HT-1001",
+        "id": "1001",
         "Category": "Laptops",
         "MainCategory": "Computer Systems",
         "TaxTarifCode": "1",
@@ -46,7 +46,7 @@
         "DimUnit": "cm"
       },
       {
-        "ProductId": "HT-1002",
+        "id": "1002",
         "Category": "Laptops",
         "MainCategory": "Computer Systems",
         "TaxTarifCode": "1",
@@ -68,7 +68,7 @@
         "DimUnit": "cm"
       },
       {
-        "ProductId": "HT-1003",
+        "id": "1003",
         "Category": "Laptops",
         "MainCategory": "Computer Systems",
         "TaxTarifCode": "1",
@@ -90,7 +90,7 @@
         "DimUnit": "cm"
       },
       {
-        "ProductId": "HT-1007",
+        "id": "1004",
         "Category": "Accessories",
         "MainCategory": "Computer Components",
         "TaxTarifCode": "1",
@@ -114,7 +114,7 @@
     ],
     "coupon":{
       "code":"FEASTIVVAL200",
-      "discount":"20%"
+      "discount":"200"
     }
   }
 }
